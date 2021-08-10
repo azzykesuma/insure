@@ -1,0 +1,451 @@
+* {
+    padding : 0;
+    margin : 0;
+}
+
+body {
+    font-family: 'Karla',sans-serif;
+}
+
+
+.mainContainer {
+    position: relative;
+}
+
+.header {
+    padding : 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuMobile {
+    background-image: url('./images/bg-pattern-mobile-nav.svg');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-color: hsl(270, 9%, 17%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding : 2em .5em;     
+    height: 500px;
+    display: none;
+    position: absolute;
+    width : 100%;
+    animation : fadeout 0.5s;
+}
+
+
+.active {
+    display: block;
+    animation: fadein 0.3s ease-in-out;
+}
+
+@keyframes fadein {
+    from {left : -1000px;}
+    to {left: 0;}
+}
+
+.menuMobile > ul > li {
+    color : #fff;
+    list-style: none;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.header > button {
+    border: none;
+    cursor: pointer;
+}
+
+.header > img {
+    height : 1em;
+}
+
+.menuDesktop {
+    display: none;
+}
+
+.imageContainer > img {
+    height : 450px;
+}
+
+.heroContainer {
+    background-color: hsl(256, 26%, 20%);
+    margin-top: -5px;
+    position: relative;
+    height : 500px;
+}
+
+.patternLeftDesktop {
+    display: none;
+}
+
+.patternRightDesktop {
+    display: none;
+}
+
+
+.heroTitle {
+    position: absolute;
+    top : 3em;
+    text-align: center;
+    padding : 20px;
+}
+
+.heroTitle > h2 {
+    color : #fff;
+    font-size: 45px;
+    font-family: 'DM serif display',sans-serif;
+    margin-bottom: 20px;
+}
+
+.heroTitle > p {
+    color : #fff;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+
+.heroTitle > button {
+    border: 1px solid #fff;
+    padding : 15px 30px;
+    text-transform: uppercase;
+    font-size: 15px;
+    background-color: transparent;
+    color : #fff;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+
+.heroTitle > button:hover {
+   cursor: pointer;
+   background-color: #fff;
+   color : #000;
+}
+
+.mainContainer > img {
+    position: absolute;
+    right: 0;
+    top : 55em;
+}
+
+.middleContainer {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.middleContainer > hr {
+    width : 150px;
+    color :hsl(216, 30%, 68%);
+    margin-bottom: 50px;
+}
+
+.middleContainer > h2 {
+    font-family: 'DM serif display',sans-serif;
+    font-size: 40px;
+    color: hsl(270, 9%, 17%);
+}
+
+.cardContainer {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline : 20px;
+    margin-bottom: 60px;
+}
+.card > img {
+    margin-bottom: 40px;
+}
+
+.card > h3 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: 'DM serif display',sans-serif;
+    font-weight: 400;
+    color : hsl(270, 9%, 17%);
+}
+
+.card > p {
+    text-align: center;
+    line-height: 1.5em;
+    color : hsl(273, 4%, 51%);
+}
+
+.middlePattern {
+    margin-block : 150px;
+    padding-top : 83px;
+    background-color: hsl(256, 26%, 20%);
+    background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    height : 346px;
+    margin-inline : 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.middlePattern > h2 {
+    font-size: 40px;
+    text-align: center;
+    color : #fff;
+    font-family: 'DM serif display';
+    margin-bottom: 30px;
+}
+
+.middlePattern > button {
+    border: 1px solid #fff;
+    padding : 15px 30px;
+    text-transform: uppercase;
+    font-size: 15px;
+    background-color: transparent;
+    color : #fff;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+
+.middlePattern > button:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color : #000;
+}
+
+footer {
+    background-color: hsl(0, 0%, 98%);
+    background-image: url('./images/bg-pattern-footer-mobile.svg');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block : 90px;
+}
+
+.footerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footerTop > img {
+    margin-bottom: 30px;
+}
+
+.socialContainer {
+    display: flex;
+    justify-content: space-around;
+    width : 150px;
+}
+
+.footerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerCard > p {
+    color :hsl(273, 4%, 51%);
+    font-weight: 700;
+    margin-block: 30px;
+}
+
+.footerCard > ul > li {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+@media screen and (min-width : 1200px) {
+    .heroContainer {
+        height : 600px;
+    }
+
+    .header {
+        padding-inline : 100px;
+    }
+
+   .header > button {
+       display: none;
+   }
+
+   .menuDesktop  {
+       display: block;
+   }
+
+   .menuDesktop > ul {
+       display: flex;
+       align-items: center;
+   }
+
+   .menuDesktop > ul > li {
+       list-style: none;
+       margin-left: 20px;
+       text-transform: uppercase;
+       color: hsl(273, 4%, 51%);
+       font-weight: 700;
+       cursor: pointer;
+      
+   }
+
+   .menuDesktop > ul > li:last-child {
+    border: 2px solid #000;
+    padding : 15px 30px;
+    text-transform: uppercase;
+    font-size: 15px;
+    background-color: transparent;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+    color : #000;
+   }
+
+   .menuDesktop > ul > li:last-child:hover {
+    cursor: pointer;
+    background-color: #000;
+    color : #fff;
+   }
+
+   .heroContainer {
+       width: 100%;
+   }
+
+   .imageContainer {
+       background-image: url('./images/image-intro-desktop.jpg');
+       position: absolute;
+       background-size: cover;
+       right : 100px;
+       top : 200px;
+       width : 400px;
+       height : 600px;
+       z-index: 999;
+   }
+
+   .imageContainer > img {
+       display: none;
+   }
+
+   .heroTitle {
+       text-align: left;
+       width : 400px;
+       padding-left: 100px;
+       top : 5.5em;
+   }
+
+   .patternLeftMobile {
+       display: none;
+   }
+
+   .patternLeftDesktop {
+       display: block;
+       position: relative;
+       top : 18em;
+       width : 200px;
+   }
+
+   .patternRightMobile {
+       display: none;
+   }
+
+   .patternRightDesktop {
+       display: block;
+       position: absolute;
+       width : 300px;
+   }
+
+   .mainContainer > img {
+    top : 6em;
+    }
+    
+    .middleContainer {
+        margin-top: 300px;
+        align-items: flex-start;
+        margin-inline : 150px;
+    }
+
+    .cardContainer {
+        flex-direction: row;
+    }
+
+    .card {
+        align-items: flex-start;
+        padding-inline : 0;
+    }
+
+    .card > p {
+        text-align: left;
+    }
+
+    .middlePattern {
+        margin-block : 0 120px;
+        margin-inline : 150px;
+        padding-top : 20px;
+        background-color: hsl(256, 26%, 20%);
+        background-image: url('./images/bg-pattern-how-we-work-desktop.svg');
+        background-size: 37em;
+        height : 200px;
+        margin-inline : 150px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .middlePattern > h2 {
+        margin-bottom: 0px;
+        width : 400px;
+        text-align: left;
+    }
+
+    .footerTop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-inline: 150px;
+    }
+
+    .footerTop > img {
+        margin-bottom: 0;
+        margin-left: 150px;
+    }
+
+    .socialContainer {
+        margin-right: 150px;
+    }
+
+    footer {
+        background-image: url('./images/bg-pattern-footer-desktop.svg');
+        padding-block : 50px;
+    }
+
+    .footerCardContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 150px;
+    }
+
+    .footerCard {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footerCard > ul > li {
+        text-align: left;
+
+    }
+}
